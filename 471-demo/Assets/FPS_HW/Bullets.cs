@@ -18,4 +18,19 @@ public class Bullets : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            print("Hit Enemy! Enemy defeated.");
+            Destroy(other.gameObject); // Destroy the enemy
+            Destroy(gameObject); // Destroy the bullet
+        }
+        else if (other.CompareTag("Wall"))
+        {
+            print("Hit a wall");
+            Destroy(gameObject);
+        }
+    }
 }

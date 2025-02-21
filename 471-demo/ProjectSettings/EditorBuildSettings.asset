@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/RollABall HW/BallPlatformer.unity
     guid: 50debae518287f04ea232fc41e318c0a
-  - enabled: 1
+  - enabled: 0
     path: Assets/FPS_HW/FPS_TargetPractice.unity
     guid: 05ff9526e603f4346b2f5a5edd4d9b60
+  - enabled: 1
+    path: Assets/StateMachineHW/StateMachineHW.unity
+    guid: 2f89d5892c1f0e448b52fe90b22ad3c8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
