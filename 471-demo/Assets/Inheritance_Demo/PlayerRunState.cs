@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class PlayerSneakState : PlayerBaseState
+public class PlayerRunState : PlayerBaseState
 {
     public override void EnterState(PlayerStateManager player)
     {
-        Debug.Log("I'm sneaking");
+        Debug.Log("I'm sprinting");
     }
 
     public override void UpdateState(PlayerStateManager player)
@@ -14,7 +14,7 @@ public class PlayerSneakState : PlayerBaseState
 
 
         //Pn what conditions do we leave the state?
-        if (player.movement.magnitude < 0.1)
+        if (player.movement.magnitude > 0.1)
         {
             player.SwitchState(player.idleState);
         } else if (player.isSneaking == false)
