@@ -57,6 +57,19 @@ public class PlayerStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
+        HandleCameraMovement(); // Ensure camera movement
+
+    }
+
+    void HandleCameraMovement()
+    {
+        if (canMove)
+        {
+            rotationX -= Input.GetAxis("Mouse Y") * lookSpeed;
+            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+            playerCam.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        }
     }
 
     //Handle Input //
